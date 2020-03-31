@@ -1,0 +1,7 @@
+simple_affiliate.settracking:
+  path: '/simple_affiliate/set-tracking-cookie'
+  defaults:
+    _controller: 'Drupal\simple_affiliate\Controller\SetTracking::setaffilliatetrackingcookie'
+    _title: 'Set Tracking Cookie'
+  requirements:
+    _permission: 'access content'

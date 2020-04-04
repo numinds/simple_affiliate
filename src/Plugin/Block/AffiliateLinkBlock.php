@@ -31,7 +31,7 @@ class AffiliateLinkBlock extends BlockBase {
     $link = $link->toString();
     $host = \Drupal::request()->getSchemeAndHttpHost();
     return [
-      '#markup' => $host . $link,
+      '#markup' => $host . $link . '/' . $user_id,
       '#prefix' => '<blockquote>',
       '#suffix' => '</blockquote>',
     ];

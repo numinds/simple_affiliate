@@ -3,5 +3,6 @@ simple_affiliate.settracking:
   defaults:
     _controller: 'Drupal\simple_affiliate\Controller\SetTracking::setaffilliatetrackingcookie'
     _title: 'Set Tracking Cookie'
+    uid: 0
   requirements:
     _permission: 'access content'

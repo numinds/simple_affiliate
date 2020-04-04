@@ -10,4 +10,4 @@ target audience.
 
 Any user that clicks on this link will have a cookie set in their browser with the users unique id. If the user registers on
 the site with the cookie still active, the new user account will be set as a referral to the account of the person who shared
-this link. 
+this link.

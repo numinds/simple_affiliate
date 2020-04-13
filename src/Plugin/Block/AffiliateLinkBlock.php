@@ -1,11 +1,8 @@
 <?php
 
-
 namespace Drupal\simple_affiliate\Plugin\Block;
 
-
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Link;
 use Drupal\Core\Url;
 
 /**
@@ -19,7 +16,7 @@ use Drupal\Core\Url;
 class AffiliateLinkBlock extends BlockBase {
 
   /**
-   * @inheritDoc
+   * {@inheritdoc}
    */
   public function build() {
 

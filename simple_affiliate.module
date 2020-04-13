@@ -1,25 +1,26 @@
 <?php
 
+/**
+ * @file
+ * Contains simple_affiliate.module.
+ */
+
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 
 /**
  * Implements hook_entity_base_field_info().
- *
- * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
- *
- * @return mixed
  */
 function simple_affiliate_entity_base_field_info(EntityTypeInterface $entity_type) {
   if ($entity_type->id() === 'user') {
     $fields['simple_affiliate_referral'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Referrer ID'))
       ->setTranslatable(TRUE)
-      ->setDisplayOptions('form', array(
+      ->setDisplayOptions('form', [
         'type' => 'hidden',
         'weight' => -5,
-      ))
-    ->setDisplayConfigurable('form', TRUE);
+      ])
+      ->setDisplayConfigurable('form', TRUE);
     return $fields;
   }
 }

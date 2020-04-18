@@ -24,3 +24,17 @@ function simple_affiliate_entity_base_field_info(EntityTypeInterface $entity_typ
     return $fields;
   }
 }
+
+/**
+ * Implements hook_user_insert().
+ *
+ */
+function simple_affiliate_user_insert($entity) {
+  if (isset($_COOKIE["simple_affiliate"])) {
+    // Checking if the tracking cookie is present and setting the value in the
+    // field.
+    $referral_id = $_COOKIE["simple_affiliate"];
+    $entity->set('simple_affiliate_referral', $referral_id);
+    $entity->save();
+  }
+}

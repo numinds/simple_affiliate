@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_simple_affiliate_referrals
+  module:
+    - user
+id: user.user.field_simple_affiliate_referrals
+field_name: field_simple_affiliate_referrals
+entity_type: user
+bundle: user
+label: 'Referral User'
+description: 'Displays the name of the affiliate who brought this user. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference
+

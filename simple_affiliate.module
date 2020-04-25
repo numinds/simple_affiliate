@@ -9,23 +9,6 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 
 /**
- * Implements hook_entity_base_field_info().
- */
-function simple_affiliate_entity_base_field_info(EntityTypeInterface $entity_type) {
-  if ($entity_type->id() === 'user') {
-    $fields['simple_affiliate_referral'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Referrer ID'))
-      ->setTranslatable(TRUE)
-      ->setDisplayOptions('form', [
-        'type' => 'hidden',
-        'weight' => -5,
-      ])
-      ->setDisplayConfigurable('form', TRUE);
-    return $fields;
-  }
-}
-
-/**
  * Implements hook_user_insert().
  *
  */
